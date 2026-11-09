@@ -1,0 +1,48 @@
+movie_id,title,genre,description,poster,language
+1,Avatar,Sci-Fi,An alien world filled with action and adventure,https://image.tmdb.org/t/p/w500/8rpDcsfLJypbO6vREc0547VKqEv.jpg,English
+3,The Avengers,Action,Superheroes unite to save the world,https://image.tmdb.org/t/p/w500/RYMX2wcKCBAr24UyPD7xwmjaTn.jpg,English
+4,Interstellar,Sci-Fi,A journey through space and time,https://image.tmdb.org/t/p/w500/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg,English
+5,The Imitation Game,Drama,A mathematician works to solve a complex wartime code,https://image.tmdb.org/t/p/w500/zSqJ1qFq8NXFfi7JeIYMlzyR0dx.jpg,English
+6,Iron Man,Action,A genius builds a powerful suit,https://image.tmdb.org/t/p/w500/78lPtwv72eTNqFW9COBYI0dWDJa.jpg,English
+7,Finding Nemo,Animation,A fish searches for his missing son,https://image.tmdb.org/t/p/w500/eHuGQ10FUzK1mdOY69wF5pGgEf5.jpg,English
+8,Toy Story,Animation,Toys come to life and have adventures,https://image.tmdb.org/t/p/w500/uXDfjJbdP4ijW5hWSBrPrlKpxab.jpg,English
+10,John Wick,Action,An action story about a skilled fighter,https://image.tmdb.org/t/p/w500/fZPSd91yGE9fCcCe6OoQr6E3Bev.jpg,English
+11,Jurassic Park,Adventure,Scientists bring dinosaurs back to life,https://image.tmdb.org/t/p/w500/oU7Oq2kFAAlGqbU4VoAE36g4hoI.jpg,English
+12,The Lion King,Animation,A young lion learns to become king,https://image.tmdb.org/t/p/w500/sKCr78MXSLixwmZ8DyJLrpMsd15.jpg,English
+13,Frozen,Animation,Two sisters face a magical winter,https://image.tmdb.org/t/p/w500/kgwjIb2JDHRhNk13lmSxiClFjVk.jpg,English
+14,The Dark Knight,Action,A hero protects a city from crime,https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg,English
+15,Inception,Sci-Fi,A thief enters dreams to steal secrets,https://image.tmdb.org/t/p/w500/oYuLEt3zVCKq57qu2F8dT7NIa6f.jpg,English
+16,Harry Potter,Fantasy,A young wizard attends a school of magic,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnN6FeK-1Fkc9lKgo7bjzbjk9G1v2xsjN_uW7f_zq3ryCSEvTqr-A6lrC0&s=10,English
+17,The Conjuring,Horror,A family experiences a supernatural mystery,https://image.tmdb.org/t/p/w500/wVYREutTvI2tmxr6ujrHT704wGF.jpg,English
+18,Home Alone,Comedy,A boy protects his house during a holiday,https://image.tmdb.org/t/p/w500/onTSipZ8R3bliBdKfPtsDuHTdlL.jpg,English
+19,Gladiator,Action,A Roman general fights for justice,https://image.tmdb.org/t/p/w500/ty8TGRuvJLPUmAR1H1nRIsgwvim.jpg,English
+20,Up,Animation,An old man travels with a young boy,https://image.tmdb.org/t/p/w500/vpbaStTMt8qqXaEgnOR2EE4DNJk.jpg,English
+21,The Matrix,Sci-Fi,A man discovers the truth about reality,https://image.tmdb.org/t/p/w500/f89U3ADr1oiB1s9GkdPOEpXUk5H.jpg,English
+22,Wonder Woman,Action,A hero fights to protect humanity,https://image.tmdb.org/t/p/w500/v4ncgZjG2Zu8ZW5al1vIZTsSjqX.jpg,English
+23,Coco,Animation,A boy explores music and family,https://image.tmdb.org/t/p/w500/gGEsBPAijhVUFoiNpgZXqRVWJt2.jpg,English
+24,La La Land,Romance,A musician and actress pursue their dreams,https://image.tmdb.org/t/p/w500/uDO8zWDhfWwoFdKS4fzkUJt0Rf0.jpg,English
+25,The Hangover,Comedy,Friends face a chaotic adventure,https://image.tmdb.org/t/p/w500/uluhlXubGu1VxU63X9VHCLWDAYP.jpg,English
+26,The Shawshank Redemption,Drama,A story of hope and friendship in prison,https://m.media-amazon.com/images/S/pv-target-images/851ab8ca1caf85fc12dbf43c08d56b63af948c4dd8ceba2992ee487234abd9bc.jpg,English
+27,The Pursuit of Happyness,Drama,A father works to build a better future,https://image.tmdb.org/t/p/w500/lBYOKAMcxIvuk9s9hMuecB9dPBV.jpg,English
+29,Sherlock Holmes,Mystery,A detective solves a challenging case,https://image.tmdb.org/t/p/w500/momkKuWburNTqKBF6ez7rvhYVhE.jpg,English
+30,The Hobbit,Fantasy,A hobbit goes on an unexpected adventure,https://image.tmdb.org/t/p/w500/yHA9Fc37VmpUA5UncTxxo3rTGVA.jpg,English
+31,Shrek,Comedy,An ogre begins an unusual adventure,https://image.tmdb.org/t/p/w500/iB64vpL3dIObOtMZgX3RqdVdQDc.jpg,English
+33,The Exorcist,Horror,A family faces a frightening supernatural mystery,https://image.tmdb.org/t/p/w500/5x0CeVHJI8tcDx8tUUwYHQSNILq.jpg,English
+34,A Quiet Place,Horror,A family tries to survive in silence,https://image.tmdb.org/t/p/w500/nAU74GmpUk7t5iklEp3bufwDq4n.jpg,English
+36,Gravity,Sci-Fi,Astronauts struggle to survive in space,https://image.tmdb.org/t/p/w500/kZ2nZw8D681aphje8NJi8EfbL1U.jpg,English
+37,The Social Network,Drama,A story about the creation of a social networking platform,https://image.tmdb.org/t/p/w500/n0ybibhJtQ5icDqTp8eRytcIHJx.jpg,English
+38,The Grand Budapest Hotel,Comedy,A hotel concierge becomes involved in a mystery,https://image.tmdb.org/t/p/w500/eWdyYQreja6JGCzqHWXpWHDrrPo.jpg,English
+39,The Secret Life of Mitty,Adventure,A man embarks on an extraordinary journey,https://image.tmdb.org/t/p/w500/tY6ypjKOOtujhxiSwTmvA4OZ5IE.jpg,English
+40,Knives Out,Mystery,A detective investigates a family's puzzling case,https://image.tmdb.org/t/p/w500/pThyQovXQrw2m0s9x82twj48Jq4.jpg,English
+57,Pawankhind,Historical,A Marathi historical film about bravery and sacrifice,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT43XLJIpLzOXE85bpE7Q2_ff_tSlBr9DfCroDJJIvxN4wsVAY6wHWygDM&s=10,Marathi
+42,Natsamrat,Drama,A theatre actor faces life challenges,https://m.media-amazon.com/images/M/MV5BOWI5ZDM3NTQtOWI0ZS00ZGI4LWE1YjEtMmZhYjk4NTE1MGMwXkEyXkFqcGc@._V1_.jpg,Marathi
+43,Drishyam,Thriller,A father protects his family,https://upload.wikimedia.org/wikipedia/en/8/8a/Drishyam_2015_film.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original,Hindi
+44,3 Idiots,Comedy,A story of three college friends,https://posters.movieposterdb.com/08_11/2009/1187043/l_1187043_be9aeb30.jpg?v=2,Hindi
+45,Chhichhore,Comedy,A story about friendship and college life,"https://static.toiimg.com/thumb/imgsize-23456,msid-66129591,width-600,resizemode-4/66129591.jpg",Hindi
+46,Dangal,Sports,A father trains his daughters in wrestling,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRr01FBJRJtRvFjE3cjAoA3JqcchUPMVOENcb-aQMqiRYpWLurzzES0VJs&s=10,Hindi
+47,Taare Zameen Par,Drama,A story about a child with learning difficulties,https://m.media-amazon.com/images/I/611JgDfdb7L.jpg,Hindi
+54,Bal Gandharva,Biography,A film about the famous Marathi theatre artist,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUSyaRN6TMS4t3b5bWAUjdy70dodyiYoiKm5-yKJWvKQ&s=10,Marathi
+56,Harishchandrachi Factory,Biography,A film about the making of India's first feature film,https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/harishchandrachi-factory-et00004109-24-03-2017-17-11-06.jpg,Marathi
+41,Sairat,Romance,A Marathi story about young love,https://i.pinimg.com/474x/29/83/a2/2983a26d9d1a3ff3501adbb7c009fc4f.jpg,Marathi
+58,War,Action,A soldier faces a dangerous mission filled with action and suspense.,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSn-nfkYv_wcUeRn-Bm6UlCx3xwg6OQVDjkik5oDCvFEhf_Cq8ImRQprfmW&s=10,Hindi
+59,Subhedar,Historical Drama,A historical Marathi film based on an important chapter of Maratha history.,https://thumb.wikimedia.org/wikipedia/en/thumb/5/5e/Subhedar_2023.jpg/250px-Subhedar_2023.jpg,Marathi

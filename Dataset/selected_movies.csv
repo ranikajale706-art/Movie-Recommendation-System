@@ -1,0 +1,48 @@
+movie_id,title,genre,description,language,content
+1,Avatar,Sci-Fi,An alien world filled with action and adventure,English,Sci-Fi An alien world filled with action and adventure
+3,The Avengers,Action,Superheroes unite to save the world,English,Action Superheroes unite to save the world
+4,Interstellar,Sci-Fi,A journey through space and time,English,Sci-Fi A journey through space and time
+5,The Imitation Game,Drama,A mathematician works to solve a complex wartime code,English,Drama A mathematician works to solve a complex wartime code
+6,Iron Man,Action,A genius builds a powerful suit,English,Action A genius builds a powerful suit
+7,Finding Nemo,Animation,A fish searches for his missing son,English,Animation A fish searches for his missing son
+8,Toy Story,Animation,Toys come to life and have adventures,English,Animation Toys come to life and have adventures
+10,John Wick,Action,An action story about a skilled fighter,English,Action An action story about a skilled fighter
+11,Jurassic Park,Adventure,Scientists bring dinosaurs back to life,English,Adventure Scientists bring dinosaurs back to life
+12,The Lion King,Animation,A young lion learns to become king,English,Animation A young lion learns to become king
+13,Frozen,Animation,Two sisters face a magical winter,English,Animation Two sisters face a magical winter
+14,The Dark Knight,Action,A hero protects a city from crime,English,Action A hero protects a city from crime
+15,Inception,Sci-Fi,A thief enters dreams to steal secrets,English,Sci-Fi A thief enters dreams to steal secrets
+16,Harry Potter,Fantasy,A young wizard attends a school of magic,English,Fantasy A young wizard attends a school of magic
+17,The Conjuring,Horror,A family experiences a supernatural mystery,English,Horror A family experiences a supernatural mystery
+18,Home Alone,Comedy,A boy protects his house during a holiday,English,Comedy A boy protects his house during a holiday
+19,Gladiator,Action,A Roman general fights for justice,English,Action A Roman general fights for justice
+20,Up,Animation,An old man travels with a young boy,English,Animation An old man travels with a young boy
+21,The Matrix,Sci-Fi,A man discovers the truth about reality,English,Sci-Fi A man discovers the truth about reality
+22,Wonder Woman,Action,A hero fights to protect humanity,English,Action A hero fights to protect humanity
+23,Coco,Animation,A boy explores music and family,English,Animation A boy explores music and family
+24,La La Land,Romance,A musician and actress pursue their dreams,English,Romance A musician and actress pursue their dreams
+25,The Hangover,Comedy,Friends face a chaotic adventure,English,Comedy Friends face a chaotic adventure
+26,The Shawshank Redemption,Drama,A story of hope and friendship in prison,English,Drama A story of hope and friendship in prison
+27,The Pursuit of Happyness,Drama,A father works to build a better future,English,Drama A father works to build a better future
+29,Sherlock Holmes,Mystery,A detective solves a challenging case,English,Mystery A detective solves a challenging case
+30,The Hobbit,Fantasy,A hobbit goes on an unexpected adventure,English,Fantasy A hobbit goes on an unexpected adventure
+31,Shrek,Comedy,An ogre begins an unusual adventure,English,Comedy An ogre begins an unusual adventure
+33,The Exorcist,Horror,A family faces a frightening supernatural mystery,English,Horror A family faces a frightening supernatural mystery
+34,A Quiet Place,Horror,A family tries to survive in silence,English,Horror A family tries to survive in silence
+36,Gravity,Sci-Fi,Astronauts struggle to survive in space,English,Sci-Fi Astronauts struggle to survive in space
+37,The Social Network,Drama,A story about the creation of a social networking platform,English,Drama A story about the creation of a social networking platform
+38,The Grand Budapest Hotel,Comedy,A hotel concierge becomes involved in a mystery,English,Comedy A hotel concierge becomes involved in a mystery
+39,The Secret Life of Mitty,Adventure,A man embarks on an extraordinary journey,English,Adventure A man embarks on an extraordinary journey
+40,Knives Out,Mystery,A detective investigates a family's puzzling case,English,Mystery A detective investigates a family's puzzling case
+57,Pawankhind,Historical,A Marathi historical film about bravery and sacrifice,Marathi,Historical A Marathi historical film about bravery and sacrifice
+42,Natsamrat,Drama,A theatre actor faces life challenges,Marathi,Drama A theatre actor faces life challenges
+43,Drishyam,Thriller,A father protects his family,Hindi,Thriller A father protects his family
+44,3 Idiots,Comedy,A story of three college friends,Hindi,Comedy A story of three college friends
+45,Chhichhore,Comedy,A story about friendship and college life,Hindi,Comedy A story about friendship and college life
+46,Dangal,Sports,A father trains his daughters in wrestling,Hindi,Sports A father trains his daughters in wrestling
+47,Taare Zameen Par,Drama,A story about a child with learning difficulties,Hindi,Drama A story about a child with learning difficulties
+54,Bal Gandharva,Biography,A film about the famous Marathi theatre artist,Marathi,Biography A film about the famous Marathi theatre artist
+56,Harishchandrachi Factory,Biography,A film about the making of India's first feature film,Marathi,Biography A film about the making of India's first feature film
+41,Sairat,Romance,A Marathi story about young love,Marathi,Romance A Marathi story about young love
+58,War,Action,A soldier faces a dangerous mission filled with action and suspense.,Hindi,Action A soldier faces a dangerous mission filled with action and suspense.
+59,Subhedar,Historical Drama,A historical Marathi film based on an important chapter of Maratha history.,Marathi,Historical Drama A historical Marathi film based on an important chapter of Maratha history.

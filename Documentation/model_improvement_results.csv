@@ -1,0 +1,4 @@
+Experiment,Average Similarity,Genre Match (%),Coverage (%)
+Default,0.3453,56.0,78.38
+Unigrams + Bigrams,0.2679,56.0,78.38
+Minimum Document Frequency 2,0.5411,58.0,67.57
