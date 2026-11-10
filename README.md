@@ -6,11 +6,15 @@ This project uses **Content-Based Filtering** to recommend movies based on their
 
 The application provides an interactive interface where users can explore movies, apply genre and language filters, receive recommendations, create accounts, log in, and manage their favourite movies.
 
+---
+
 ## 1. Aim
 
 The main aim of this project is to design and develop a Machine Learning-based Movie Recommendation System that suggests similar movies based on their content.
 
 The system analyzes movie genres and descriptions, converts textual information into numerical representations, and calculates similarity between movies using Cosine Similarity.
+
+---
 
 ## 2. Objectives
 
@@ -29,6 +33,8 @@ The system analyzes movie genres and descriptions, converts textual information 
 - To provide user registration and login.
 - To implement favourite movie management.
 
+---
+
 ## 3. Problem Statement
 
 A large number of movies are available across different genres and languages. Users often face difficulty selecting movies because they may not know which movies are similar to their interests.
@@ -40,16 +46,21 @@ To address this problem, this project develops a Machine Learning-based Movie Re
 The system analyzes movie genres and descriptions, converts textual information into numerical vectors using CountVectorizer, and measures similarity using Cosine Similarity.
 
 ### Input
+
 - A movie selected by the user.
 - Movie genre and description information.
 
 ### Output
+
 - A list of recommended movies.
 - Similarity scores.
 - Movie titles and posters.
 
 ### Machine Learning Task
+
 Content-Based Recommendation using text feature extraction and similarity measurement.
+
+---
 
 ## 4. Dataset Information
 
@@ -85,12 +96,14 @@ These two features are combined to create the textual content used by the recomm
 
 Other attributes are used by the application:
 
-- Title: Movie identification and selection.
-- Language: Language-based filtering.
-- Poster: Displaying movie images.
-- Movie ID: Movie identification.
+- **Title:** Movie identification and selection.
+- **Language:** Language-based filtering.
+- **Poster:** Displaying movie images.
+- **Movie ID:** Movie identification.
 
 Language, poster, and movie ID are not included in the recommendation model's text vectorization.
+
+---
 
 ## 5. Machine Learning Pipeline
 
@@ -151,7 +164,7 @@ The dataset was divided into training and testing subsets using an 80:20 ratio.
 | Split ratio | 80:20 |
 | Random state | 42 |
 
-This split is used for the notebook experiment. The final content-based recommendation model is fitted using the complete movie collection.
+This split is used in the notebook experiment. The final content-based recommendation model is fitted using the complete movie collection.
 
 ### Step 7: Model Comparison
 
@@ -191,28 +204,28 @@ Movies are ranked according to their similarity scores, and the application disp
         Exploratory Data Analysis
                    |
                    v
-            Feature Selection
+             Feature Selection
                    |
                    v
-          Genre + Description
+           Genre + Description
                    |
                    v
-            CountVectorizer
+              CountVectorizer
                    |
                    v
-          Numerical Vectors
+             Numerical Vectors
                    |
                    v
-           Cosine Similarity
+             Cosine Similarity
                    |
                    v
-          Similarity Ranking
+             Similarity Ranking
                    |
                    v
-          Recommended Movies
+            Recommended Movies
                    |
                    v
-           Streamlit Frontend
+            Streamlit Frontend
 ```
 
 ### System Architecture
@@ -230,21 +243,22 @@ Movies are ranked according to their similarity scores, and the application disp
           |                  |
           v                  v
     CONTENT FEATURES    USER ACCOUNTS
-          |             AND FAVOURITES
+                        AND FAVOURITES
+          |
           v
      COUNTVECTORIZER
           |
           v
-    NUMERICAL VECTORS
+     NUMERICAL VECTORS
           |
           v
-    COSINE SIMILARITY
+     COSINE SIMILARITY
           |
           v
-   RECOMMENDATION RESULTS
+  RECOMMENDATION RESULTS
           |
           v
-     DISPLAY MOVIE CARDS
+    DISPLAY MOVIE CARDS
 ```
 
 ### Feature Scaling / Normalization
@@ -252,6 +266,8 @@ Movies are ranked according to their similarity scores, and the application disp
 The selected features are textual data rather than independent numerical measurement features. Therefore, a separate numerical scaling technique such as StandardScaler is not required.
 
 Cosine Similarity is used to compare the direction of the numerical text vectors.
+
+---
 
 ## 6. Algorithms and Techniques Used
 
@@ -267,7 +283,7 @@ In this project:
 - Text is converted into numerical vectors.
 - Vectors are used to calculate movie similarity.
 
-Advantages:
+**Advantages:**
 
 - Simple to implement.
 - Suitable for text feature extraction.
@@ -287,12 +303,14 @@ Cosine Similarity measures the similarity between two numerical vectors.
 
 It calculates the cosine of the angle between the vectors.
 
-Role in the project:
+**Role in the project:**
 
 - Compares movie-content vectors.
 - Calculates similarity scores.
 - Identifies movies with similar content.
 - Supports recommendation ranking.
+
+---
 
 ## 7. Experimental Results
 
@@ -334,6 +352,8 @@ Three CountVectorizer configurations were tested using the updated 48-movie data
 
 **Evaluation Note:** These are project-specific diagnostic measures, not conventional classification accuracy. Average similarity, genre match, and coverage measure different aspects of recommendation behaviour. They should not be interpreted as proof of user satisfaction or recommendation accuracy.
 
+---
+
 ## 8. Final Recommendation Model
 
 The final recommendation approach uses Content-Based Filtering.
@@ -364,6 +384,8 @@ The Jupyter Notebook contains the ML development and experimentation process.
 The Streamlit application independently trains its recommendation model when the application runs.
 
 The current `app.py` implementation does not load `movie_recommender_model.joblib`; it creates the CountVectorizer feature matrix and Cosine Similarity matrix dynamically from `movies.csv`.
+
+---
 
 ## 9. Frontend and Application Features
 
@@ -415,29 +437,34 @@ SQLite is used to manage user accounts and favourite movies.
 
 Database operations are implemented separately in `database.py`.
 
+---
+
 ## 10. Screenshots
 
-The following screenshots demonstrate the working application and analysis.
-
 ### A. Movie Application
-Main application interface with navigation, filters, and user profile.
+
+![Movie Application](Screenshots/movie_app.png)
 
 ### B. Movie List
-Available movies displayed with their titles and posters.
+
+![Movie List](Screenshots/movie_list.png)
 
 ### C. Movie Recommendations
-Recommendation results generated after selecting a movie.
+
+![Movie Recommendations](Screenshots/recommendations.png)
 
 ### D. Genre Distribution
-Graphical representation of movie genres.
+
+![Genre Distribution](eda_graphs/genre_distribution.png)
 
 ### E. Language Distribution
-Graphical representation of movie languages.
+
+![Language Distribution](eda_graphs/language_distribution.png)
 
 ### F. Description Length Distribution
-Visualization of movie description lengths.
 
-*Add the corresponding screenshots and EDA graph images from the Screenshots and eda_graphs folders when displaying this README.*
+![Description Distribution](eda_graphs/description_distribution.png)
+---
 
 ## 11. Technologies Used
 
@@ -455,6 +482,8 @@ Visualization of movie description lengths.
 | Joblib | Model serialization support |
 | Jupyter Notebook | ML development and experimentation |
 | Git and GitHub | Version control and project hosting |
+
+---
 
 ## 12. Installation and Execution
 
@@ -494,13 +523,19 @@ Streamlit provides a local address in the terminal.
 
 Open that address in a web browser to access the Movie Recommendation System.
 
+---
+
 ## 13. GitHub Repository
 
 **Repository Name:** Movie Recommendation System
 
-**GitHub:** https://github.com/ranikajale706-art/Movie-Recommendation-System
+**GitHub Repository:**
+
+https://github.com/ranikajale706-art/Movie-Recommendation-System
 
 The repository contains the project source code, dataset, ML notebook, documentation, screenshots, and supporting files.
+
+---
 
 ## 14. Project Summary
 
