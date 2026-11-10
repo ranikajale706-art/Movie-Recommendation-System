@@ -69,9 +69,7 @@ Content-Based Recommendation using text feature extraction and similarity measur
 
 The project uses a custom-curated movie dataset containing information about different movies.
 
-The dataset contains **47 movie records** with six attributes.
-
-### Dataset Description
+The dataset contains **48 movie records** with six attributes.
 
 ### Dataset Description
 
@@ -115,7 +113,7 @@ The Machine Learning pipeline describes the complete process followed to develop
 
 ### Step 1: Data Collection
 
-A custom-curated movie dataset containing 47 records was prepared in CSV format.
+A custom-curated movie dataset containing 48 records was prepared in CSV format.
 
 ### Step 2: Data Preprocessing
 
@@ -557,7 +555,7 @@ https://github.com/ranikajale706-art/Movie-Recommendation-System
 
 The Movie Recommendation System demonstrates the practical application of Machine Learning and Natural Language Processing concepts in movie discovery.
 
-The project uses a custom-curated dataset containing 47 movie records. Data preprocessing and feature selection are performed to prepare movie information for recommendation.
+The project uses a custom-curated dataset containing 48 movie records. Data preprocessing and feature selection are performed to prepare movie information for recommendation.
 
 CountVectorizer and TF-IDF are implemented and compared. Cosine Similarity is used to measure similarity between movies based on genre and description.
 

@@ -73,8 +73,6 @@ The dataset contains **48 movie records** with six attributes.
 
 ### Dataset Description
 
-### Dataset Description
-
 | Attribute | Description |
 |---|---|
 | movie_id | Unique identification number of the movie |
@@ -557,7 +555,7 @@ https://github.com/ranikajale706-art/Movie-Recommendation-System
 
 The Movie Recommendation System demonstrates the practical application of Machine Learning and Natural Language Processing concepts in movie discovery.
 
-The project uses a custom-curated dataset containing 47 movie records. Data preprocessing and feature selection are performed to prepare movie information for recommendation.
+The project uses a custom-curated dataset containing 48 movie records. Data preprocessing and feature selection are performed to prepare movie information for recommendation.
 
 CountVectorizer and TF-IDF are implemented and compared. Cosine Similarity is used to measure similarity between movies based on genre and description.
 
