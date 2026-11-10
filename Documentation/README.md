@@ -73,8 +73,11 @@ The dataset contains **47 movie records** with six attributes.
 
 ### Dataset Description
 
+### Dataset Description
+
 | Attribute | Description |
 |---|---|
+| movie_id | Unique identification number of the movie |
 | Title | Name of the movie |
 | Genre | Category or type of movie |
 | Description | Short description or storyline of the movie |
@@ -83,8 +86,8 @@ The dataset contains **47 movie records** with six attributes.
 
 ### Dataset Features
 
-- Total movie records: 47
-- Total attributes: 5
+- Total movie records: 48
+- Total attributes: 6
 - Movie languages: English, Hindi, and Marathi
 - Data format: CSV
 - Dataset file: `movies.csv`
