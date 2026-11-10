@@ -1,189 +1,183 @@
 # 🎬 Movie Recommendation System
 
-A Machine Learning-based Movie Recommendation System developed using **Python, Scikit-learn, Pandas, and Streamlit**. This project uses **Content-Based Filtering** to recommend movies based on their genre and description.
+A Machine Learning-based Movie Recommendation System developed using Python, Scikit-learn, Pandas, and Streamlit.
 
-The system helps users discover movies similar to their selected movie. It provides an interactive interface where users can explore movies, apply genre and language filters, receive recommendations, create accounts, log in, and manage their favourite movies.
+This project uses **Content-Based Filtering** to recommend movies based on their genres and descriptions. It calculates similarity between movies using CountVectorizer and Cosine Similarity.
 
----
+The application provides an interactive interface where users can explore movies, apply genre and language filters, receive recommendations, create accounts, log in, and manage their favourite movies.
 
 ## 1. Aim
 
-The main aim of this project is to design and develop a Machine Learning-based Movie Recommendation System that recommends movies according to their content.
+The main aim of this project is to design and develop a Machine Learning-based Movie Recommendation System that suggests similar movies based on their content.
 
 The system analyzes movie genres and descriptions, converts textual information into numerical representations, and calculates similarity between movies using Cosine Similarity.
 
-The application provides an easy-to-use interface through which users can discover movies and receive relevant recommendations.
-
----
-
 ## 2. Objectives
 
-The main objectives of the Movie Recommendation System are:
-
-1. To develop a movie recommendation system using Machine Learning techniques.
-2. To implement Content-Based Filtering for recommending similar movies.
-3. To collect and organize movie information in a structured dataset.
-4. To perform data preprocessing and cleaning.
-5. To select relevant features such as genre and description.
-6. To convert textual movie information into numerical vectors.
-7. To calculate similarity between movies using Cosine Similarity.
-8. To implement and compare CountVectorizer and TF-IDF vectorization techniques.
-9. To perform Exploratory Data Analysis (EDA) using graphical visualizations.
-10. To evaluate different model configurations and select a suitable final model.
-11. To develop an interactive frontend using Streamlit.
-12. To provide movie filtering based on genre and language.
-13. To implement user registration, login, and favourite movie management.
-
----
+- To develop a movie recommendation system using Machine Learning.
+- To implement Content-Based Filtering.
+- To collect and organize movie information in a structured dataset.
+- To perform data preprocessing and cleaning.
+- To select relevant features such as genre and description.
+- To convert textual information into numerical vectors.
+- To calculate similarity using Cosine Similarity.
+- To compare CountVectorizer and TF-IDF techniques.
+- To perform Exploratory Data Analysis (EDA).
+- To experiment with different model configurations.
+- To develop an interactive Streamlit application.
+- To implement genre and language filtering.
+- To provide user registration and login.
+- To implement favourite movie management.
 
 ## 3. Problem Statement
 
-Nowadays, a large number of movies are available in different genres and languages. Users often face difficulty selecting a movie because they may not know which movies are similar to their interests.
+A large number of movies are available across different genres and languages. Users often face difficulty selecting movies because they may not know which movies are similar to their interests.
 
-Searching manually through a large collection of movies can be time-consuming.
+Searching manually through a movie collection can be time-consuming.
 
-To solve this problem, this project proposes a Machine Learning-based Movie Recommendation System that recommends movies based on their content.
+To address this problem, this project develops a Machine Learning-based Movie Recommendation System that recommends movies according to their content.
 
-The system analyzes movie genres and descriptions and identifies movies having similar textual features. It uses CountVectorizer to convert text into numerical vectors and Cosine Similarity to measure similarity between movies.
-
-The application displays recommended movies through an interactive Streamlit interface.
+The system analyzes movie genres and descriptions, converts textual information into numerical vectors using CountVectorizer, and measures similarity using Cosine Similarity.
 
 ### Input
-
 - A movie selected by the user.
-- Movie genre and description information from the dataset.
+- Movie genre and description information.
 
 ### Output
-
 - A list of recommended movies.
-- Similarity scores for recommended movies.
+- Similarity scores.
 - Movie titles and posters.
 
 ### Machine Learning Task
-
 Content-Based Recommendation using text feature extraction and similarity measurement.
-
----
 
 ## 4. Dataset Information
 
-The project uses a custom-curated movie dataset containing information about different movies.
+The project uses a custom-curated movie dataset containing **48 movie records**.
 
-The dataset contains **48 movie records** with six attributes.
-
-### Dataset Description
+### Dataset Attributes
 
 | Attribute | Description |
 |---|---|
-| movie_id | Unique identification number of the movie |
-| Title | Name of the movie |
-| Genre | Category or type of movie |
-| Description | Short description or storyline of the movie |
-| Poster | Movie poster reference |
-| Language | Language of the movie |
+| movie_id | Unique identification number |
+| title | Name of the movie |
+| genre | Movie category |
+| description | Short movie description |
+| poster | Movie poster reference |
+| language | Language of the movie |
 
-### Dataset Features
+### Dataset Details
 
 - Total movie records: 48
 - Total attributes: 6
-- Movie languages: English, Hindi, and Marathi
-- Data format: CSV
-- Dataset file: `movies.csv`
+- Languages: English, Hindi, and Marathi
+- File format: CSV
+- Main dataset: `movies.csv`
 
 ### Feature Usage
 
-The dataset contains several attributes, but the recommendation model uses only the following content features:
+The recommendation model uses:
 
-- **Genre:** Represents the category of the movie.
-- **Description:** Represents the storyline and textual information of the movie.
+1. Genre
+2. Description
+
+These two features are combined to create the textual content used by the recommendation algorithm.
 
 Other attributes are used by the application:
 
-- Title is used for movie identification and selection.
-- Language is used for frontend filtering.
-- Poster is used for displaying movie images.
+- Title: Movie identification and selection.
+- Language: Language-based filtering.
+- Poster: Displaying movie images.
+- Movie ID: Movie identification.
 
-The language and poster attributes are not included in the model's text vectorization.
+Language, poster, and movie ID are not included in the recommendation model's text vectorization.
 
----
+## 5. Machine Learning Pipeline
 
-## 5. ML Pipeline
-
-The Machine Learning pipeline describes the complete process followed to develop the Movie Recommendation System.
+The following pipeline describes the development process.
 
 ### Step 1: Data Collection
 
-A custom-curated movie dataset containing 47 records was prepared in CSV format.
+A custom-curated dataset containing 48 movie records was prepared in CSV format.
 
 ### Step 2: Data Preprocessing
 
 The dataset was prepared for analysis and model development.
 
-The preprocessing operations include:
+Operations include:
 
+- Checking missing values.
 - Removing duplicate records.
 - Handling missing text values.
 - Removing unnecessary whitespace.
-- Cleaning the dataset for further processing.
-
-**Purpose:** To maintain consistent data and prepare the textual information for feature extraction.
+- Preparing textual data for feature extraction.
 
 ### Step 3: Exploratory Data Analysis
 
-EDA was performed to understand the structure and distribution of the dataset.
+EDA was performed to understand the dataset.
 
-The following visualizations were generated:
+Visualizations include:
 
 - Genre distribution.
 - Language distribution.
 - Description length distribution.
 
-Matplotlib was used to generate the graphical representations.
+Matplotlib was used for graphical visualization.
 
 ### Step 4: Feature Selection
 
-Relevant features were selected for the recommendation model.
+The relevant features selected for recommendation are:
 
-The selected features are:
+- Genre
+- Description
 
-1. Genre
-2. Description
-
-Both features are combined to create a content feature used by the recommendation model.
+Both features are combined into a single content feature.
 
 ### Step 5: Feature Extraction
 
-The selected textual content is converted into numerical vectors using CountVectorizer.
+CountVectorizer converts textual movie information into numerical vectors.
 
-An alternative TF-IDF vectorization technique was also implemented for comparison.
+TF-IDF Vectorizer was also implemented for comparison.
 
 ### Step 6: Train-Test Split
 
 The dataset was divided into training and testing subsets using an 80:20 ratio.
 
-- Training records: 37
-- Testing records: 10
-- Random state: 42
+| Dataset | Records |
+|---|---:|
+| Total records | 48 |
+| Training records | 38 |
+| Testing records | 10 |
+| Split ratio | 80:20 |
+| Random state | 42 |
+
+This split is used for the notebook experiment. The final content-based recommendation model is fitted using the complete movie collection.
 
 ### Step 7: Model Comparison
 
-CountVectorizer and TF-IDF were compared using project-defined diagnostic measures.
+CountVectorizer and TF-IDF were studied using project-defined recommendation diagnostic measures.
 
 ### Step 8: Similarity Calculation
 
-Cosine Similarity was used to calculate similarity between movie-content vectors.
+Cosine Similarity calculates the similarity between movie-content vectors.
 
 ### Step 9: Model Improvement
 
-Different CountVectorizer configurations were experimented with to observe their effect on similarity, genre match, and coverage.
+Different CountVectorizer configurations were experimented with to observe their effects on:
+
+- Average similarity.
+- Genre match.
+- Recommendation coverage.
 
 ### Step 10: Final Model
 
-The selected CountVectorizer model was trained using the complete dataset of 47 records and saved using Joblib.
+The final notebook model uses CountVectorizer with the complete 48-movie dataset.
+
+The Streamlit application independently performs the same content-based recommendation process when it runs.
 
 ### Step 11: Recommendation Output
 
-The Streamlit application loads the saved model and displays movies with similar content.
+Movies are ranked according to their similarity scores, and the application displays the recommended movies.
 
 ### ML Pipeline Diagram
 
@@ -224,21 +218,24 @@ The Streamlit application loads the saved model and displays movies with similar
 ### System Architecture
 
 ```text
-                  USER
-                    |
-                    v
-           STREAMLIT APPLICATION
-                    |
-          +---------+----------+
-          |                    |
-          v                    v
-     MOVIE DATASET        SQLITE DATABASE
-          |                    |
-          v                    v
-    SAVED ML MODEL       USER ACCOUNTS
-          |              AND FAVOURITES
+                 USER
+                   |
+                   v
+          STREAMLIT APPLICATION
+                   |
+          +--------+---------+
+          |                  |
+          v                  v
+     MOVIE DATASET      SQLITE DATABASE
+          |                  |
+          v                  v
+    CONTENT FEATURES    USER ACCOUNTS
+          |             AND FAVOURITES
           v
      COUNTVECTORIZER
+          |
+          v
+    NUMERICAL VECTORS
           |
           v
     COSINE SIMILARITY
@@ -247,255 +244,219 @@ The Streamlit application loads the saved model and displays movies with similar
    RECOMMENDATION RESULTS
           |
           v
-    DISPLAY MOVIE CARDS
+     DISPLAY MOVIE CARDS
 ```
 
 ### Feature Scaling / Normalization
 
 The selected features are textual data rather than independent numerical measurement features. Therefore, a separate numerical scaling technique such as StandardScaler is not required.
 
-Cosine Similarity compares the direction of the text vectors and is used to measure similarity between movie-content representations.
+Cosine Similarity is used to compare the direction of the numerical text vectors.
 
----
-
-## 6. Algorithms Used
-
-The project implements and compares two text vectorization approaches.
+## 6. Algorithms and Techniques Used
 
 ### A. CountVectorizer
 
 CountVectorizer is a text feature extraction technique provided by Scikit-learn.
 
-It converts textual information into numerical vectors based on the frequency of words in the documents.
+It converts textual information into numerical vectors based on word frequencies.
 
 In this project:
 
 - Genre and description are combined.
 - Text is converted into numerical vectors.
-- These vectors are used for calculating movie similarity.
+- Vectors are used to calculate movie similarity.
 
-**Advantages:**
+Advantages:
 
 - Simple to implement.
-- Suitable for text-based feature extraction.
-- Provides numerical representations of movie descriptions.
+- Suitable for text feature extraction.
+- Converts textual information into numerical representations.
 
 ### B. TF-IDF Vectorizer
 
 TF-IDF stands for Term Frequency-Inverse Document Frequency.
 
-It is another text feature extraction technique that assigns importance to words based on their frequency in a document and across the collection of documents.
+It assigns importance to words based on their frequency in a document and across the document collection.
 
-It helps represent the importance of words in movie descriptions.
-
-**Advantages:**
-
-- Gives different importance to words.
-- Reduces the influence of very common terms.
-- Provides an alternative representation for comparison.
+It was implemented as an alternative feature extraction technique for comparison.
 
 ### C. Cosine Similarity
 
-Cosine Similarity is used to measure the similarity between two numerical vectors.
+Cosine Similarity measures the similarity between two numerical vectors.
 
 It calculates the cosine of the angle between the vectors.
 
-The similarity score is used to rank movies according to their content similarity.
-
-**Role in the project:**
+Role in the project:
 
 - Compares movie-content vectors.
 - Calculates similarity scores.
-- Helps identify movies with similar content.
+- Identifies movies with similar content.
 - Supports recommendation ranking.
-
----
 
 ## 7. Experimental Results
 
-Experiments were performed to compare different text vectorization techniques and improve recommendation performance.
+Experiments were conducted to study different text vectorization techniques and CountVectorizer configurations.
 
 ### A. Train-Test Split
 
-The dataset was divided into training and testing subsets.
-
-| Dataset | Number of Records |
+| Parameter | Value |
 |---|---:|
-| Total Records | 47 |
-| Training Records | 37 |
-| Testing Records | 10 |
-| Split Ratio | 80:20 |
-| Random State | 42 |
+| Total records | 48 |
+| Training records | 38 |
+| Testing records | 10 |
+| Split ratio | 80:20 |
+| Random state | 42 |
 
-An 80:20 split was selected to use most of the available records for training while reserving a portion for testing.
+### B. Model Comparison
 
-### B. Model Comparison Results
+CountVectorizer and TF-IDF were implemented and compared in the project.
 
-CountVectorizer and TF-IDF were compared using the same movie-content features.
-
-| Evaluation Measure | CountVectorizer | TF-IDF |
-|---|---:|---:|
-| Average Similarity | 0.3453 | 0.2923 |
-| Genre Match | 56% | 52% |
-| Coverage | 78.38% | 78.38% |
-
-### Result Analysis
-
-- CountVectorizer achieved a higher average similarity score.
-- CountVectorizer achieved a higher genre-match percentage.
-- Both methods achieved the same coverage.
-- Based on these experimental results, CountVectorizer was selected as the final approach.
+The notebook includes the feature extraction comparison. The final recommendation implementation uses CountVectorizer.
 
 ### C. Model Improvement Experiments
 
-Different CountVectorizer configurations were tested to observe their effect on recommendation results.
+Three CountVectorizer configurations were tested using the updated 48-movie dataset.
 
-| Experiment | Average Similarity | Genre Match | Coverage |
+| Experiment | Average Similarity | Genre Match (%) | Coverage (%) |
 |---|---:|---:|---:|
-| Default CountVectorizer | 0.3453 | 56% | 78.38% |
-| Unigrams + Bigrams | 0.2679 | 56% | 78.38% |
-| min_df = 2 | 0.5411 | 58% | 67.57% |
+| Default CountVectorizer | 0.0402 | 54.17 | 97.92 |
+| Unigrams + Bigrams | 0.0248 | 54.58 | 97.92 |
+| Minimum Document Frequency 2 | 0.0707 | 57.08 | 100.00 |
 
-### Observation
+### Result Analysis
 
-The `min_df=2` configuration increased the average similarity and genre-match values but reduced coverage.
+- Default CountVectorizer achieved an average similarity of 0.0402.
+- Unigrams and bigrams achieved a genre match of 54.58%.
+- Minimum Document Frequency 2 achieved the highest average similarity and genre match.
+- Minimum Document Frequency 2 also achieved 100% coverage.
+- Default CountVectorizer was retained for the final implementation to maintain consistency with the existing application.
 
-The default CountVectorizer configuration was selected because it provided a better balance between similarity results and coverage.
+**Evaluation Note:** These are project-specific diagnostic measures, not conventional classification accuracy. Average similarity, genre match, and coverage measure different aspects of recommendation behaviour. They should not be interpreted as proof of user satisfaction or recommendation accuracy.
 
-**Evaluation Note:** The above values are project-specific diagnostic measures. They are not conventional classification accuracy. The project does not use labelled user-preference data or ground-truth relevance labels to calculate recommendation accuracy.
+## 8. Final Recommendation Model
 
----
-
-## 8. Final Model
-
-After comparing the implemented approaches and conducting improvement experiments, CountVectorizer was selected as the final text vectorization technique.
+The final recommendation approach uses Content-Based Filtering.
 
 ### Final Model Configuration
 
 | Component | Selected Method |
 |---|---|
-| Recommendation Technique | Content-Based Filtering |
-| Content Features | Genre + Description |
-| Feature Extraction | CountVectorizer |
-| Similarity Measurement | Cosine Similarity |
-| Dataset Size | 47 Records |
-| Model Saving | Joblib |
+| Recommendation technique | Content-Based Filtering |
+| Content features | Genre + Description |
+| Feature extraction | CountVectorizer |
+| Similarity measurement | Cosine Similarity |
+| Dataset size | 48 records |
+| Recommendation ranking | Similarity scores |
 
 ### Final Model Process
 
 1. Movie genre and description are combined.
-2. CountVectorizer converts the textual content into numerical vectors.
+2. CountVectorizer converts textual content into numerical vectors.
 3. Cosine Similarity calculates similarity between movie vectors.
-4. Similarity scores are used to rank movies.
-5. The system returns the most similar movies.
+4. Similarity scores are ranked.
+5. The system returns similar movies.
 
-### Saved Model
+### Model Integration
 
-The trained model is saved in the following file:
+The Jupyter Notebook contains the ML development and experimentation process.
 
-`movie_recommender_model.joblib`
+The Streamlit application independently trains its recommendation model when the application runs.
 
-The Streamlit application loads the saved model to generate movie recommendations.
+The current `app.py` implementation does not load `movie_recommender_model.joblib`; it creates the CountVectorizer feature matrix and Cosine Similarity matrix dynamically from `movies.csv`.
 
-The model is prepared separately and loaded by the frontend application.
+## 9. Frontend and Application Features
 
----
+The frontend is developed using Streamlit.
 
-## 9. Front-end Details
+### 1. User Registration
 
-The frontend of the Movie Recommendation System is developed using **Streamlit**.
+New users can create an account.
 
-Streamlit provides an interactive web interface that allows users to explore movies and receive recommendations.
+### 2. User Login
 
-### Frontend Features
+Registered users can log in to the application.
 
-**1. User Registration**
+### 3. User Profile
 
-New users can create an account to access the application.
+The application displays the logged-in user's profile information.
 
-**2. User Login**
-
-Registered users can log in to their accounts.
-
-**3. User Profile**
-
-The application provides a profile section for logged-in users.
-
-**4. Discover Movies**
+### 4. Discover Movies
 
 Users can explore the available movie collection.
 
-**5. Genre Filtering**
+### 5. Genre Filtering
 
-Users can filter movies according to their preferred genre.
+Users can filter movies according to genre.
 
-**6. Language Filtering**
+### 6. Language Filtering
 
 Users can filter movies based on English, Hindi, and Marathi languages.
 
-**7. Movie Recommendations**
+### 7. Movie Recommendations
 
-Users can select a movie and receive recommendations based on content similarity.
+Users can select a movie and receive similar movie suggestions.
 
-**8. Movie Posters**
+### 8. Movie Posters
 
-Movie posters are displayed along with movie information.
+Movie posters are displayed along with movie information when available.
 
-**9. My Favorites**
+### 9. My Favorites
 
-Users can add movies to their favourites list and view their saved favourites.
+Users can add movies to their favourite list.
 
-**10. Remove Favorites**
+### 10. Remove Favorites
 
-Users can remove previously saved movies from their favourites list.
+Users can remove movies from their favourite list.
 
 ### Database
 
 SQLite is used to manage user accounts and favourite movies.
 
-The database operations are implemented separately in `database.py`.
-
----
+Database operations are implemented separately in `database.py`.
 
 ## 10. Screenshots
 
-The following screenshots demonstrate the working of the Movie Recommendation System.
+The following screenshots demonstrate the working application and analysis.
 
 ### A. Movie Application
-
-This screenshot displays the main application interface, including movie discovery, navigation, filters, and user profile.
-
-![Movie Application](Screenshots/movie_app.png)
+Main application interface with navigation, filters, and user profile.
 
 ### B. Movie List
-
-This screenshot displays the available movies with their titles and posters.
-
-![Movie List](Screenshots/movie_list.png)
+Available movies displayed with their titles and posters.
 
 ### C. Movie Recommendations
-
-This screenshot demonstrates the recommendation results generated after selecting a movie.
-
-![Movie Recommendations](Screenshots/recommendations.png)
+Recommendation results generated after selecting a movie.
 
 ### D. Genre Distribution
-
-![Genre Distribution](eda_graphs/genre_distribution.png)
+Graphical representation of movie genres.
 
 ### E. Language Distribution
-
-![Language Distribution](eda_graphs/language_distribution.png)
+Graphical representation of movie languages.
 
 ### F. Description Length Distribution
+Visualization of movie description lengths.
 
-![Description Length Distribution](eda_graphs/description_distribution.png)
+*Add the corresponding screenshots and EDA graph images from the Screenshots and eda_graphs folders when displaying this README.*
 
----
+## 11. Technologies Used
 
-## 11. Installation and Execution Instructions
+| Technology | Purpose |
+|---|---|
+| Python | Main programming language |
+| Pandas | Dataset handling |
+| Scikit-learn | Machine Learning and text vectorization |
+| CountVectorizer | Text feature extraction |
+| TF-IDF | Alternative text feature extraction |
+| Cosine Similarity | Similarity calculation |
+| Matplotlib | Data visualization |
+| Streamlit | Frontend application |
+| SQLite | User and favourites database |
+| Joblib | Model serialization support |
+| Jupyter Notebook | ML development and experimentation |
+| Git and GitHub | Version control and project hosting |
 
-Follow the steps below to download and execute the project on your local system.
+## 12. Installation and Execution
 
 ### Prerequisites
 
@@ -503,9 +464,7 @@ Follow the steps below to download and execute the project on your local system.
 - Visual Studio Code (recommended)
 - Internet connection for installing dependencies
 
-### Step 1: Clone the GitHub Repository
-
-Open PowerShell or the VS Code terminal and execute:
+### Step 1: Clone the Repository
 
 ```bash
 git clone https://github.com/ranikajale706-art/Movie-Recommendation-System.git
@@ -517,9 +476,7 @@ git clone https://github.com/ranikajale706-art/Movie-Recommendation-System.git
 cd Movie-Recommendation-System
 ```
 
-### Step 3: Install Required Libraries
-
-Install all required dependencies using:
+### Step 3: Install Dependencies
 
 ```bash
 python -m pip install -r requirements.txt
@@ -533,34 +490,30 @@ streamlit run app.py
 
 ### Step 5: Open the Application
 
-After executing the command, Streamlit will provide a local address in the terminal.
+Streamlit provides a local address in the terminal.
 
-Open the displayed address in a web browser to access the Movie Recommendation System.
+Open that address in a web browser to access the Movie Recommendation System.
 
----
-
-## 12. GitHub Repository
-
-The complete project source code, dataset, notebook, trained model, documentation, and screenshots are maintained in the GitHub repository.
+## 13. GitHub Repository
 
 **Repository Name:** Movie Recommendation System
 
-**GitHub Link:**
+**GitHub:** https://github.com/ranikajale706-art/Movie-Recommendation-System
 
-https://github.com/ranikajale706-art/Movie-Recommendation-System
+The repository contains the project source code, dataset, ML notebook, documentation, screenshots, and supporting files.
 
----
-
-## 13. Project Summary
+## 14. Project Summary
 
 The Movie Recommendation System demonstrates the practical application of Machine Learning and Natural Language Processing concepts in movie discovery.
 
-The project uses a custom-curated dataset containing 48 movie records. Data preprocessing and feature selection are performed to prepare movie information for recommendation.
+The project uses a custom-curated dataset containing 48 movie records. Data preprocessing, feature selection, and Exploratory Data Analysis are performed to prepare the movie information for recommendation.
 
-CountVectorizer and TF-IDF are implemented and compared. Cosine Similarity is used to measure similarity between movies based on genre and description.
+CountVectorizer and TF-IDF are implemented for text feature extraction, while Cosine Similarity is used to measure similarity between movies.
 
-After conducting experiments, CountVectorizer is selected as the final text vectorization approach. The trained model is saved using Joblib and integrated with a Streamlit frontend.
+Different CountVectorizer configurations are also experimented with to study recommendation similarity, genre match, and coverage.
 
-The application provides movie discovery, genre and language filtering, movie recommendations, user registration, login, and favourite movie management.
+The Streamlit application provides movie discovery, genre and language filtering, movie recommendations, user registration, login, and favourite movie management.
 
-This project demonstrates how machine learning techniques can be used to build an interactive content-based recommendation application.
+SQLite is used to store user account and favourite movie information.
+
+The project demonstrates how content-based Machine Learning techniques can be integrated into an interactive movie recommendation application.
