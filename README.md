@@ -4,7 +4,7 @@ A Machine Learning-based Movie Recommendation System developed using Python, Sci
 
 This project uses **Content-Based Filtering** to recommend movies based on their genres and descriptions. It calculates similarity between movies using CountVectorizer and Cosine Similarity.
 
-The application provides an interactive interface where users can explore movies, apply genre and language filters, receive recommendations, create accounts, log in, and manage their favourite movies.
+The application provides an interactive interface where users can explore movies, apply genre and language filters, receive recommendations, create accounts and log in.
 
 ---
 
@@ -31,7 +31,6 @@ The system analyzes movie genres and descriptions, converts textual information 
 - To develop an interactive Streamlit application.
 - To implement genre and language filtering.
 - To provide user registration and login.
-- To implement favourite movie management.
 
 ---
 
@@ -243,7 +242,7 @@ Movies are ranked according to their similarity scores, and the application disp
           |                  |
           v                  v
     CONTENT FEATURES    USER ACCOUNTS
-                        AND FAVOURITES
+                        
           |
           v
      COUNTVECTORIZER
@@ -423,17 +422,9 @@ Users can select a movie and receive similar movie suggestions.
 
 Movie posters are displayed along with movie information when available.
 
-### 9. My Favorites
-
-Users can add movies to their favourite list.
-
-### 10. Remove Favorites
-
-Users can remove movies from their favourite list.
-
 ### Database
 
-SQLite is used to manage user accounts and favourite movies.
+SQLite is used to manage user accounts.
 
 Database operations are implemented separately in `database.py`.
 
@@ -478,7 +469,7 @@ Database operations are implemented separately in `database.py`.
 | Cosine Similarity | Similarity calculation |
 | Matplotlib | Data visualization |
 | Streamlit | Frontend application |
-| SQLite | User and favourites database |
+| SQLite | User and database |
 | Joblib | Model serialization support |
 | Jupyter Notebook | ML development and experimentation |
 | Git and GitHub | Version control and project hosting |
@@ -547,8 +538,8 @@ CountVectorizer and TF-IDF are implemented for text feature extraction, while Co
 
 Different CountVectorizer configurations are also experimented with to study recommendation similarity, genre match, and coverage.
 
-The Streamlit application provides movie discovery, genre and language filtering, movie recommendations, user registration, login, and favourite movie management.
+The Streamlit application provides movie discovery, genre and language filtering, movie recommendations, user registration and login,
 
-SQLite is used to store user account and favourite movie information.
+SQLite is used to store user account.
 
 The project demonstrates how content-based Machine Learning techniques can be integrated into an interactive movie recommendation application.

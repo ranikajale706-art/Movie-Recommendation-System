@@ -8,10 +8,7 @@ from PIL import Image
 
 from database import (
     register_user,
-    login_user,
-    get_favorites,
-    add_favorite,
-    remove_favorite
+    login_user
 )
 
 from sklearn.feature_extraction.text import CountVectorizer
@@ -106,10 +103,6 @@ def load_movies():
 
 
 movies = load_movies()
-
-# IMPORTANT:
-# Keep "genre" as the internal CSV column name.
-# Only its visible display name is Movie Category.
 
 required_columns = [
     "title",
@@ -269,9 +262,6 @@ def brand_header(subtitle):
 if "user" not in st.session_state:
     st.session_state.user = None
 
-if "page" not in st.session_state:
-    st.session_state.page = "Discover"
-
 if "recommendation_results" not in st.session_state:
     st.session_state.recommendation_results = []
 
@@ -299,8 +289,7 @@ if st.session_state.user is None:
         st.subheader("Welcome")
 
         st.write(
-            "Log in to explore recommendations "
-            "and save your favourite movies."
+            "Log in to explore personalized movie recommendations."
         )
 
         login_tab, register_tab = st.tabs(
@@ -463,16 +452,9 @@ with st.sidebar:
 
     st.divider()
 
-    page = st.radio(
-        "Navigation",
-        ["Discover", "My Favorites"],
-        index=(
-            0 if st.session_state.page == "Discover"
-            else 1
-        )
-    )
+    st.markdown("### Navigation")
 
-    st.session_state.page = page
+    st.write("🎬 Discover Movies")
 
     st.divider()
 
@@ -482,75 +464,10 @@ with st.sidebar:
     ):
 
         st.session_state.user = None
-        st.session_state.page = "Discover"
+        st.session_state.recommendation_results = []
+        st.session_state.recommendation_for = None
 
         st.rerun()
-
-
-# --------------------------------------------------
-# MY FAVORITES PAGE
-# --------------------------------------------------
-
-if st.session_state.page == "My Favorites":
-
-    brand_header(
-        "Your saved collection, all in one place."
-    )
-
-    favorite_ids = get_favorites(user["id"])
-
-    favorite_movies = movies[
-        movies.index.isin(favorite_ids)
-    ]
-
-    if favorite_movies.empty:
-
-        st.info(
-            "You haven't saved any movies yet. "
-            "Visit Discover and press Add to Favorites."
-        )
-
-    else:
-
-        st.write(
-            f"You have saved **{len(favorite_movies)}** movie(s)."
-        )
-
-        cols = st.columns(4)
-
-        for position, (_, movie) in enumerate(
-            favorite_movies.iterrows()
-        ):
-
-            with cols[position % 4]:
-
-                show_poster(
-                    movie["poster"],
-                    movie["title"]
-                )
-
-                st.markdown(
-                    f"**{movie['title']}**"
-                )
-
-                st.caption(
-                    f"Movie Category: {movie['genre']} • "
-                    f"{movie['language']}"
-                )
-
-                if st.button(
-                    "Remove from Favorites",
-                    key=f"remove_fav_{movie.name}"
-                ):
-
-                    remove_favorite(
-                        user["id"],
-                        int(movie.name)
-                    )
-
-                    st.rerun()
-
-    st.stop()
 
 
 # --------------------------------------------------
@@ -720,40 +637,6 @@ else:
             selected_movie["description"]
         )
 
-        favorite_ids = get_favorites(user["id"])
-
-        if selected_index in favorite_ids:
-
-            if st.button(
-                "★ Remove from Favorites",
-                key="toggle_selected_fav"
-            ):
-
-                remove_favorite(
-                    user["id"],
-                    int(selected_index)
-                )
-
-                st.rerun()
-
-        else:
-
-            if st.button(
-                "☆ Add to Favorites",
-                key="toggle_selected_fav"
-            ):
-
-                add_favorite(
-                    user["id"],
-                    int(selected_index)
-                )
-
-                st.success(
-                    "Added to your favorites."
-                )
-
-                st.rerun()
-
 
     # --------------------------------------------------
     # ML-BASED MOVIE RECOMMENDATIONS
@@ -838,22 +721,6 @@ else:
                     f"Similarity: {round(score * 100)}%"
                 )
 
-                if st.button(
-                    "☆ Favorite",
-                    key=f"rec_fav_{idx}"
-                ):
-
-                    add_favorite(
-                        user["id"],
-                        int(idx)
-                    )
-
-                    st.success(
-                        "Saved to favorites."
-                    )
-
-                    st.rerun()
-
 
 # --------------------------------------------------
 # EXPLORE ALL MOVIES
@@ -912,12 +779,10 @@ st.caption(
 # DISPLAY ALL MOVIES
 # --------------------------------------------------
 
-favorite_ids = get_favorites(user["id"])
-
 for _, movie in page_movies.iterrows():
 
-    poster_col, info_col, action_col = st.columns(
-        [1, 3, 1]
+    poster_col, info_col = st.columns(
+        [1, 4]
     )
 
     with poster_col:
@@ -941,38 +806,6 @@ for _, movie in page_movies.iterrows():
         st.write(
             movie["description"]
         )
-
-    with action_col:
-
-        is_fav = int(movie.name) in favorite_ids
-
-        if is_fav:
-
-            if st.button(
-                "★ Saved",
-                key=f"all_remove_{movie.name}"
-            ):
-
-                remove_favorite(
-                    user["id"],
-                    int(movie.name)
-                )
-
-                st.rerun()
-
-        else:
-
-            if st.button(
-                "☆ Favorite",
-                key=f"all_add_{movie.name}"
-            ):
-
-                add_favorite(
-                    user["id"],
-                    int(movie.name)
-                )
-
-                st.rerun()
 
     st.divider()
 
